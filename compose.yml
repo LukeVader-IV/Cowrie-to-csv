@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  http-server:
+    image: cowrie-to-csv
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./cowrie.json:/app/cowrie.json:ro
+    environment:
+      - PORT=8000
